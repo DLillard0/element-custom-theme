@@ -1,0 +1,16 @@
+/* theme color */
+$--color-primary: var(--color-primary, #409EFF);
+$--color-success: var(--color-success, #67C23A);
+$--color-warning: var(--color-warning, #E6A23C);
+$--color-danger: var(--color-danger, #F56C6C);
+$--color-info: var(--color-info, #909399);
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+// 覆盖 sass 内置的 mix 函数，使用 css 的 color-mix 函数代替
+@function mix($color1, $color2, $p: 50%) {
+  @return color-mix(in srgb, $color1 $p, $color2);
+}
+
+@import "~element-ui/packages/theme-chalk/src/index";
